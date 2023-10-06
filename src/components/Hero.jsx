@@ -5,15 +5,15 @@ import { BsArrowRight } from "react-icons/bs";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center w-full border border-black">
+    <section className="flex flex-col items-center w-full">
       <div className="flex items-center justify-center w-full h-screen hero-bg md:h-auto md:pt-28 md:pb-24 lg:py-40">
         <div className="flex flex-col items-center justify-center gap-10">
           <div className=" flex flex-col items-center justify-center w-[400px] md:w-[800px]">
-            <h1 className="font-poppins border mb-10 lg:-mb-5 text-white font-bold text-6xl md:text-8xl lg:text-[150px] drop-shadow-lg ">
+            <h1 className="font-poppins mb-10 lg:-mb-5 text-white font-bold text-6xl md:text-8xl lg:text-[150px] drop-shadow-lg ">
               AirPro X3
             </h1>
             <img
-              className=" border w-80 md:w-[500px] lg:w-[700px]"
+              className=" w-80 md:w-[500px] lg:w-[700px]"
               src={shoe1}
               alt=""
             />
