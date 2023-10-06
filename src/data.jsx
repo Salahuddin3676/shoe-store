@@ -10,12 +10,12 @@ export const menuLinks = [
     title: "Shop",
   },
   {
-    id: 1,
+    id: 3,
     url: "#about",
     title: "About",
   },
   {
-    id: 1,
+    id: 4,
     url: "#contact",
     title: "Contact",
   },
