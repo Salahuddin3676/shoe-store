@@ -8,15 +8,15 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <nav className="flex bg-white  flex-col md:flex-row items-center justify-between py-5 px-6 md:px-16 lg:px-20 lg:h-16">
-      <div className="flex gap-5 items-center w-full justify-between">
+    <nav className="fixed top-0 left-0 z-50 flex flex-col items-center justify-between w-full px-6 py-5 shadow-md bg-slate-200 md:flex-row md:px-16 lg:px-20 lg:h-16">
+      <div className="flex items-center justify-between w-full gap-5">
         <a
           href="#home"
-          className=" cursor-pointer font-poppins font-bold text-xl text-blue-900 border-2 border-gray-500 px-1"
+          className="px-1 text-xl font-bold text-blue-900 border-2 border-gray-500 cursor-pointer font-poppins"
         >
           SHOESTORE
         </a>
-        <ul className="hidden lg:flex items-center gap-12 items-left">
+        <ul className="items-center hidden gap-12 lg:flex items-left">
           {menuLinks.map((link) => {
             const { id, url, title } = link;
             return (
@@ -27,33 +27,33 @@ const Navbar = () => {
               </li>
             );
           })}
-          <div className="flex ml-5 gap-2 ">
-            <p className="font-semibold font-montserrat text-indigo-800">
+          <div className="hidden gap-2 ml-5 lg:flex">
+            <p className="font-semibold text-indigo-800 font-montserrat">
               $284.56
             </p>
-            <BsFillHandbagFill className="text-xl cursor-pointer hover:text-indigo-800 text-indigo-700" />
+            <BsFillHandbagFill className="text-xl text-indigo-700 cursor-pointer hover:text-indigo-800" />
           </div>
         </ul>
 
         <div
           onClick={() => setShowMenu(!showMenu)}
-          className="border lg:hidden border-gray-400 cursor-pointer"
+          className="border border-gray-400 cursor-pointer lg:hidden"
         >
           {showMenu ? (
-            <AiOutlineClose className=" text-3xl" />
+            <AiOutlineClose className="text-3xl " />
           ) : (
-            <BiMenu className=" text-3xl" />
+            <BiMenu className="text-3xl " />
           )}
         </div>
       </div>
       {showMenu && (
-        <ul className="flex md:hidden mt-5 gap-4 flex-col w-full items-left">
+        <ul className="flex flex-col w-full gap-4 mt-5 md:hidden items-left">
           {menuLinks.map((link) => {
             const { id, url, title } = link;
             return (
               <li className="" key={id}>
                 <a
-                  className=" hover:text-blue-800 font-montserrat font-semibold"
+                  className="font-semibold hover:text-blue-800 font-montserrat"
                   href={url}
                 >
                   {title}
