@@ -8,8 +8,8 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 flex flex-col items-center justify-between w-full px-6 py-5 border border-black shadow-md bg-slate-200 md:flex-row md:px-16 lg:px-20 lg:h-16">
-      <div className="flex items-center justify-between w-full border border-blue-600">
+    <nav className="fixed top-0 left-0 z-50 flex flex-col items-center justify-between w-full px-6 py-4 shadow-md bg-slate-200 md:flex-row md:px-16 lg:px-20 lg:h-16">
+      <div className="flex items-center justify-between w-full">
         <a
           href="#home"
           className="px-1 text-xl font-bold text-blue-900 border-2 border-gray-500 cursor-pointer font-poppins"
@@ -37,13 +37,9 @@ const Navbar = () => {
 
         <div
           onClick={() => setShowMenu(!showMenu)}
-          className="border border-gray-400 cursor-pointer lg:hidden"
+          className="text-3xl border border-gray-400 cursor-pointer lg:hidden"
         >
-          {showMenu ? (
-            <AiOutlineClose className="text-3xl " />
-          ) : (
-            <BiMenu className="text-3xl " />
-          )}
+          {showMenu ? <AiOutlineClose /> : <BiMenu />}
         </div>
       </div>
 
