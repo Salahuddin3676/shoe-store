@@ -6,4 +6,5 @@
   background: url(./assets/images/heroBg3.jpg);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
